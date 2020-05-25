@@ -135,7 +135,7 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
 	{
 
 		int iv=0, it=0, is=0, im=0;
-		int i=0, j=0, n=0;
+		int i=0, j=0, n=0, k=0;
 		double S=0, T=0, V=0;
 		double v[10], t[10], s[10];
 
@@ -181,32 +181,33 @@ void __fastcall TForm1::Button2Click(TObject *Sender)
 
 		if (T==0)
 		{
+			Memo3->Lines->Add("Ошибка, деление на ноль");
 			ADOQuery1->Close();
 			ADOQuery1->SQL->Clear();
-			ADOQuery1->SQL->Add("UPDATE `tablica` SET `otvet`=0 WHERE `nomer` =:param1");
-//			ADOQuery1->Parameters->ParamByName("param1")->Value = nomer;
-//			ADOQuery1->Open();
+			ADOQuery1->SQL->Add("UPDATE `tablica` SET `otvet`=:param3 WHERE `nomer` =:param1");
+			ADOQuery1->Parameters->ParamByName("param1")->Value = nomer;
+			ADOQuery1->Parameters->ParamByName("param3")->Value = k;
+			ADOQuery1->Open();
+			ADOTable1->Active=true;
 
-//			ADOQuery1->FieldByName("otvet")->AsString = 0;
-			Memo3->Lines->Add("Ошибка, деление на ноль");
 		}
 
 		else
 		{
 			V=S/T;
+			Memo3->Lines->Add(V);
 			ADOQuery1->Close();
 			ADOQuery1->SQL->Clear();
-			ADOQuery1->SQL->Add("UPDATE `tablica` SET `otvet`=V WHERE `nomer` =:param1");
-//			ADOQuery1->Parameters->ParamByName("param1")->Value = nomer;
-//			ADOQuery1->Open();
+			ADOQuery1->SQL->Add("UPDATE `tablica` SET `otvet`=:param3 WHERE `nomer` =:param1");
+			ADOQuery1->Parameters->ParamByName("param1")->Value = nomer;
+			ADOQuery1->Parameters->ParamByName("param3")->Value = V;
+			ADOQuery1->Open();
+			ADOTable1->Active=true;
 
-//			ADOQuery1->FieldByName("otvet")->AsString = V;
-			Memo3->Lines->Add(V);
 		}
 
 	}
 }
-
 
 //---------------------------------------------------------------------------
 
@@ -365,7 +366,7 @@ void __fastcall TForm1::Button7Click(TObject *Sender)
 		}
 		//Memo3->Lines->Add(a);
 }
-*/
+
 
 void __fastcall TForm1::Button4Click(TObject *Sender)
 {
@@ -389,13 +390,13 @@ void __fastcall TForm1::Button4Click(TObject *Sender)
 			ADOQuery1->Close();
 			ADOQuery1->SQL->Clear();
 			ADOQuery1->SQL->Add("SELECT * FROM `slova` WHERE `sinonim` =:param1");
-			ADOQuery1->Parameters->ParamByName("param1")->Value = Edit2->Text;
+			ADOQuery1->Parameters->ParamByName("param2")->Value = Edit2->Text;
 			ADOQuery1->Open();
 			AnsiString str = ADOQuery1->FieldByName("groups")->AsString;
 			Label2->Caption=str;
 
 }
-
+*/
 
 //---------------------------------------------------------------------------
 
@@ -415,8 +416,6 @@ void __fastcall TForm1::razbivkaClick(TObject *Sender)
 		ADOQuery1->Parameters->ParamByName("param1")->Value = nomer;
 		ADOQuery1->Open();
 		AnsiString text = ADOQuery1->FieldByName("zadacha")->AsString;
-
-//		AnsiString str = ADOQuery1->FieldByName("otvet")->AsString;
 //		String text = Memo1->Lines->GetText();
 
 		String word;     																	//(char **) преобразование к типу
@@ -479,8 +478,7 @@ void __fastcall TForm1::razbivkaClick(TObject *Sender)
 //		}
 
 	}
-	nomer = 1;
-
+		nomer = 1;
 
 //---------------------------------------------------------------------------
 
@@ -518,32 +516,27 @@ void __fastcall TForm1::razbivkaClick(TObject *Sender)
 
 				if (str=="")
 				{
-					ADOQuery1->Close();
-					ADOQuery1->SQL->Clear();
-					ADOQuery1->SQL->Add("UPDATE `tablica` SET `zadacha`=:param2 WHERE `nomer` =:param1");
-//					ADOQuery1->Parameters->ParamByName("param1")->Value = nomer;
-//					ADOQuery1->Parameters->ParamByName("param2")->Value = words[i]+' ';
-//					ADOQuery1->Open();
-
-//					ADOQuery1->FieldByName("zadacha")->AsString = ADOQuery1->FieldByName("zadacha")->AsString + words[i] + " ";
 					Memo_slova->Text=Memo_slova->Text+words[i]+" ";
 				}
 
 				else
 				{
-					ADOQuery1->Close();
-					ADOQuery1->SQL->Clear();
-					ADOQuery1->SQL->Add("UPDATE `tablica` SET `zadacha`=param2 WHERE `nomer` =:param1");
-//					ADOQuery1->Parameters->ParamByName("param1")->Value = nomer;
-//					ADOQuery1->Parameters->ParamByName("param2")->Value = str+' ';
-//					ADOQuery1->Open();
-
-//					ADOQuery1->FieldByName("zadacha")->AsString = ADOQuery1->FieldByName("zadacha")->AsString + str + " ";
 					Memo_slova->Text=Memo_slova->Text+str+" ";
 				}
 
 			}
 		}
+
+		nomer++;
+		String zadacha = Memo_slova->Text;
+
+		ADOQuery1->Close();
+		ADOQuery1->SQL->Clear();
+		ADOQuery1->SQL->Add("INSERT INTO `tablica`(`nomer`, `zadacha`, `otvet`) VALUES (param1, param2, 0)");
+		ADOQuery1->Parameters->ParamByName("param1")->Value = nomer;
+		ADOQuery1->Parameters->ParamByName("param2")->Value = zadacha;
+		ADOQuery1->Open();
+		ADOTable1->Active=true;
 	}
 }
 
