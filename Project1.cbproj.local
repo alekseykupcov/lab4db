@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.414,C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\mysqlcppconn8-2-vs14.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.301,=C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\mysqlcppconn8-2-vs14.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.874,=C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\mysqlcppconn8-2-vs14.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.022,C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\mysqlcppconn8-2-vs14.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.422,=C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\mysqlcppconn8-2-vs14.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.885,C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\mysqlcppconn8-2-vs14.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.034,=C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\mysqlcppconn8-2-vs14.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.579,C:\Work\libmysql.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.707,=C:\Work\libmysql.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.835,=C:\Users\Алексей\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.889,C:\Work\libmysql.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.075,=C:\Work\libmysql.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.626,=C:\Work\libmysql.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.629,C:\Work\libmysql.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.435,C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\mysqlcppconn8-2-vs14.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.241,C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\mysqlcppconn-7-vs14.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.080,C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\mysqlcppconn-7-vs14.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.018,=C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\mysqlcppconn-7-vs14.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.881,=C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\mysqlcppconn-7-vs14.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.788,C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Unit1.dfm=C:\Users\Алексей\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.788,C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Unit1.h=C:\Users\Алексей\Documents\RAD Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.486,=C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\mysqlcppconn-7-vs14.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.852,C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\libmysql.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.071,=C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Win32\Debug\libmysql.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.787,C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Unit1.cpp=C:\Users\Алексей\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.673,=C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Profiling\AQtimeModule1.aqt</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.530,C:\Program Files (x86)\MySQL\MySQL Connector C 6.1\lib\libmysql.lib=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.001,=C:\Program Files (x86)\MySQL\MySQL Connector C 6.1\lib\libmysql.lib</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.596,C:\Users\Алексей\Documents\RAD Studio\Projects\Labaratornaya\Project1.cbproj=C:\Users\Алексей\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
